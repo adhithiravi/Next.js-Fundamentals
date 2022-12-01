@@ -1,0 +1,30 @@
+.bgWrap {
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  z-index: -1;
+}
+.bgHeader {
+  margin: 0;
+  padding-top: 25px;
+  font-size: 56px;
+  font-weight: 800;
+  color: #fff;
+  line-height: 45px;
+  text-align: center;
+}
+
+.bgText {
+  margin: 0;
+  font-size: 30px;
+  padding-top: 25px;
+  color: #fff;
+  text-align: center;
+  font-style: italic;
+}
+
+.bgLinks {
+  text-decoration: none;
+  color: #fff;
+}
