@@ -10,7 +10,6 @@
   padding-top: 25px;
   font-size: 56px;
   font-weight: 800;
-  color: #fff;
   line-height: 45px;
   text-align: center;
 }
@@ -19,12 +18,10 @@
   margin: 0;
   font-size: 30px;
   padding-top: 25px;
-  color: #fff;
   text-align: center;
   font-style: italic;
 }
 
 .bgLinks {
   text-decoration: none;
-  color: #fff;
 }
