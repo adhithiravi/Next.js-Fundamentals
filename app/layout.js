@@ -4,6 +4,7 @@ import Link from "next/link";
 // These styles apply to every route in the application
 import "./global.css";
 import styles from "./rootStyle.module.css";
+
 const inter = Open_Sans({
   subsets: ["latin"],
   weight: ["400"],
