@@ -29,3 +29,36 @@
   text-decoration: none;
   color: #fff;
 }
+.parentContainer {
+  margin: 50px;
+}
+
+.infoContainer {
+  display: block;
+  box-sizing: inherit;
+  margin-top: 1rem;
+  background-color: #262630;
+  padding: 10px;
+}
+
+.titleText {
+  text-align: center;
+  font-size: 26px;
+  font-weight: 800;
+  color: #bdfef2;
+}
+
+.descText {
+  font-size: 14px;
+  color: #fff;
+  line-height: 24px;
+  flex-wrap: wrap;
+  padding: 10px;
+}
+
+.infoText {
+  text-align: center;
+  font-size: 20px;
+  font-weight: 800;
+  color: #fff;
+}
