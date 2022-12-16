@@ -2,6 +2,7 @@ import { speakerJson } from "../page";
 import styles from "../../conference.module.css";
 
 function fetchSpeakerInfo(params) {
+  // API call, DB Query, fetch from the app
   const speakerInfo = [];
 
   speakerJson.speakers.map((speaker) => {
@@ -11,9 +12,10 @@ function fetchSpeakerInfo(params) {
   return speakerInfo;
 }
 
-export default function Page({ params }) {
+export default async function Page({ params }) {
   const speakerInfo = fetchSpeakerInfo(params);
-  const { name, bio, id, sessions } = speakerInfo[0];
+
+  const { id, name, bio, sessions } = speakerInfo[0];
 
   return (
     <div key={id} className={styles.infoContainer}>

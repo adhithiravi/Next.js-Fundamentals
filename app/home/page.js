@@ -9,7 +9,7 @@ export default function Page() {
         <Image
           src={ourStoryPic}
           alt="Out story pic"
-          placeholder={"blur"}
+          placeholder="blur"
           quality={100}
           sizes="100vw"
           fill
