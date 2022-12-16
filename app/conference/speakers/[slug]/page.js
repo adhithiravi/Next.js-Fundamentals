@@ -14,10 +14,10 @@ function fetchSpeakerInfo(params) {
 export default async function Page({ params }) {
   const speakerInfo = fetchSpeakerInfo(params);
 
-  const { id, name, bio, sessions } = speakerInfo;
+  const { name, bio, sessions } = speakerInfo;
 
   return (
-    <div key={id} className={styles.infoContainer}>
+    <div className={styles.infoContainer}>
       <h3 className={styles.titleText}>{name}</h3>
       <h5 className={styles.descText}>About: {bio}</h5>
       {sessions &&
