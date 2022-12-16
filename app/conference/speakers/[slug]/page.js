@@ -3,11 +3,10 @@ import styles from "../../conference.module.css";
 
 function fetchSpeakerInfo(params) {
   // API call, DB Query, fetch from the app
-  const speakerInfo = [];
 
-  speakerJson.speakers.map((speaker) => {
-    if (speaker.name == params.slug) return speakerInfo.push(speaker);
-  });
+  const speakerInfo = speakerJson.speakers?.find(
+    (speaker) => speaker.name == params.slug
+  );
 
   return speakerInfo;
 }
@@ -15,7 +14,7 @@ function fetchSpeakerInfo(params) {
 export default async function Page({ params }) {
   const speakerInfo = fetchSpeakerInfo(params);
 
-  const { id, name, bio, sessions } = speakerInfo[0];
+  const { id, name, bio, sessions } = speakerInfo;
 
   return (
     <div key={id} className={styles.infoContainer}>
