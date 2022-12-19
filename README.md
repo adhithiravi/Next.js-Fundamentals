@@ -2,6 +2,16 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 ## Getting Started
 
+Next.js Fundamentals Course on Pluralsight Demo code
+by Adhithi Ravichandran
+
+Course link:
+
+https://app.pluralsight.com/library/courses/nextjs-13-fundamentals/table-of-contents
+
+
+App Structure:
+
 The `app/` directory can coexist with the existing `pages` directory for incremental adoption. 
 
 The Globomantics conference app for this course will be using the `app/` directory to configure the pages.
