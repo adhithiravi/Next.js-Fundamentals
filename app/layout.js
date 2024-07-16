@@ -1,4 +1,4 @@
-import { Open_Sans } from "@next/font/google";
+import { Open_Sans } from "next/font/google";
 import Link from "next/link";
 
 // These styles apply to every route in the application
