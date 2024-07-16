@@ -1,4 +1,3 @@
-import Link from "next/link";
 import Image from "next/image";
 import ourStoryPic from "../../images/home-image-1.jpg";
 import styles from "./home.module.css";
