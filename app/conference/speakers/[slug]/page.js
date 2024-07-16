@@ -1,18 +1,31 @@
 import { speakerJson } from "../page";
 import styles from "../../conference.module.css";
 
-function fetchSpeakerInfo(params) {
+async function getSpeakerInfo(slug) {
   // API call, DB Query, fetch from the app
 
-  const speakerInfo = speakerJson.speakers?.find(
-    (speaker) => speaker.name == params.slug
+  const speakers = await fetch(
+    "https://raw.githubusercontent.com/adhithiravi/Consuming-GraphqL-Apollo/master/api/data/speakers.json"
   );
 
-  return speakerInfo;
+  let speakersList = await speakers.json();
+  speakersList = speakersList.speakers;
+
+  return getSpeakerDetails(speakersList, atob(slug));
 }
 
-export default async function Page({ params }) {
-  const speakerInfo = fetchSpeakerInfo(params);
+function getSpeakerDetails(speakers, speakerId) {
+  const speaker = speakers.find(({ id }) => id === speakerId);
+
+  if (speaker === undefined) {
+    throw new Error(`Speaker with id ${speakerId} not found`);
+  }
+
+  return speaker;
+}
+
+export default async function Page({ params: { slug } }) {
+  const speakerInfo = await getSpeakerInfo(slug);
 
   const { name, bio, sessions } = speakerInfo;
 

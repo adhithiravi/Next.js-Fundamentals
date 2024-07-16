@@ -27,7 +27,7 @@ export default async function Page() {
         <div key={id} className={styles.infoContainer}>
           <Link
             className={styles.bgLinks}
-            href={`/conference/speakers/${name}`}
+            href={`/conference/speakers/${btoa(id)}`}
           >
             <h3 className={styles.titleText}>{name}</h3>
           </Link>
